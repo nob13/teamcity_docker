@@ -1,2 +1,4 @@
-# teamcity_docker
-Dockerfile for Teamcity 9.0.2
+# Teamcity Server
+
+Dockerfile for Teamcity Server 9.x
+
