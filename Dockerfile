@@ -1,11 +1,11 @@
-FROM dockerfile/java:oracle-java8
+FROM java/8-jre
 
 MAINTAINER Norbert Schultz
 
 VOLUME  ["/data/teamcity"]
 ENV TEAMCITY_DATA_PATH /data/teamcity
 
-RUN curl -L https://download.jetbrains.com/teamcity/TeamCity-9.0.2.tar.gz | tar xz -C /opt
+RUN curl -L https://download.jetbrains.com/teamcity/TeamCity-9.0.3.tar.gz | tar xz -C /opt
 
 # Note: we cannot download the Postgres (or other) database JDBC drivers so easily because
 # Teamcity want's them inside the /data/teamcity/lib/jdbc directory.
